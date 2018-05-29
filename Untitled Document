@@ -1,0 +1,11 @@
+why is there an extra 9 in x coordinate?
+how to highlight the effected part while dragging?
+
+[...element parent].indexof to get index..
+
+i am not sure if i should use new codes i don't quite understand yet in my program. like..http://jsfiddle.net/nGRwt/7/
+or just install some plugins(libraries) that does the desired functions for me.
+
+the code for matching the ship with grids was long and look terrible.
+
+i can't drag my ships to the right

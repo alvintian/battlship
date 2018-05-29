@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head><title>Battleship</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="scripts/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <div id="splashscreen">
+        <h2>Let's play BattleShip!</h2>
+        <img src="images/battleships.jpg" />
+        <button class="enter_link">Game Start!</button>
+        <button class="highscore">Highscores!</button>
+    </div>
+    <div class ="Title"></div>
+    <span class="map">
+        <div class="leftBoard" id="leftBoard"></div>
+        <div class="rightBoard" id="rightBoard"></div>
+    </span>
+    <div class="menu" ondrop="drop(event)" ondragover="allowDrop(event)">
+       <img src="images/2GridShip.png" draggable="true" ondragstart="drag(event)" id="battleship1" width="100" height="50" class="battleship1" >
+       <img src="images/3GridShip.png" draggable="true" ondragstart="drag(event)" id="battleship2" width="150" height="50" class="battleship2">
+       <img src="images/3GridSub.png" draggable="true" ondragstart="drag(event)" id="battleship3" width="150" height="50" class="battleship3">
+       <img src="images/4GridShip.png" draggable="true" ondragstart="drag(event)" id="battleship4" width="200" height="50" class="battleship4">
+       <img src="images/5GridShip.png" draggable="true" ondragstart="drag(event)" id="battleship5" width="250" height="50" class="battleship5">
+        <input type="image" id="myimage" src="images/.images/image.png" width="170" height="135" onclick="freshGame()"/>
+       <tag class="gameMenu" id="beginGame" onclick="gameReady()">Begin battle!</tag>
+       <tag type="reset" class="gameMenu" id="newGame" onclick="gameRefresh()">New Game</tag>
+   </div>
+   <script type="text/javascript" src="scripts/script.js"></script>
+   <script type="text/javascript" src="scripts/startBattle.js"></script>
+</body>
+</html>

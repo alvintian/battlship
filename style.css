@@ -1,0 +1,120 @@
+*,*:before,*:after {
+  box-sizing: border-box;
+}
+
+#splashscreen {
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  width:100%;
+  background-color:white;
+  z-index:999;
+
+}
+
+.Title{
+  position:absolute;
+  margin: 0px;
+  width: 1200px;
+  height: 100px;
+  background-color: #00FFFF;
+  text-align: center;
+  vertical-align: middle;
+  font:italic bold 80px arial,serif;
+}
+.map{
+  position:absolute;
+  margin-top: 100px;
+  width: 1200px;
+  height: 500px;
+  background-color: #92a8d1;
+}
+.leftBoard {
+  width: 500px;
+  height: 500px;
+/*  background: grey;
+*/  display: grid;
+grid-template-columns: 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px;
+grid-template-rows: 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px;
+grid-gap: 2px;
+border:1px solid;
+position: absolute;
+margin-left: 50px;
+overflow: hidden;
+}
+.rightBoard {
+  width: 500px;
+  height: 500px;
+  background: grey;
+  display: grid;
+  grid-template-columns: 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px;
+  grid-template-rows: 48px 48px 48px 48px 48px 48px 48px 48px 48px 48px;
+  grid-gap: 2px;
+  border:1px solid;
+  position: absolute;
+  margin-left: 650px;
+  z-index: 0;
+}
+.menu{
+  position:absolute;
+  margin-top: 600px;
+  width: 1200px;
+  height: 200px;
+  background-color: green;
+}
+
+.leftCell, .rightCell {
+  background-color: #0095DD;
+  transition: background-color .5s;
+
+}
+.leftCell--miss, .rightCell--miss {
+  background-color: lightblue;
+}
+
+.leftCell--hit, .rightCell--hit {
+  background-color: red;
+}
+#myimage{
+  visibility:hidden;
+}
+
+#battleship1,#battleship2,#battleship3,#battleship4,#battleship5{
+  /*z-index: 999;*/
+  transform: rotate(0deg);
+}
+.battleship1rotate{
+ margin-left: -25px;
+ margin-top:25px;
+}
+.battleship2rotate,.battleship3rotate{
+ margin-left: -50px;
+ margin-top: 50px; 
+}
+.battleship5rotate{
+ margin-left: -100px;
+ margin-top:100px; 
+}
+.battleship4rotate{
+ margin-left: -75px;
+ margin-top: 75px; 
+}
+.gameMenu{
+  border:2px solid;
+  margin-top:20px;
+  float: right;
+  background-color:grey;
+  cursor: pointer;
+}
+div[title='regulate']{
+  pointer-events:none;
+}
+
+/*  #battleship1{
+  transform: none !important;
+  }*/
+ /*.cell > img {
+  width: 100%;
+  height: 100%;
+  }*/
