@@ -33,7 +33,7 @@ function makeEnemies() {
 	document.querySelector(".menu").appendChild(enemyship3);
 	document.querySelector(".menu").appendChild(enemyship4);
 	document.querySelector(".menu").appendChild(enemyship5);
-	
+
 	for (let i = 1; i <= 10; i++) {
 		for (let j = 0; j < 10; j++) {
 			blocks.push(letters[j] + i)
@@ -191,11 +191,13 @@ function guidedEnemyFire(leftGridsCopy) {
 		document.querySelector(".Title").innerHTML = "@== Fire Away!";
 		RightBoard.removeAttribute('title');
 		if (targettedGrids.length > 0) {
+			//The order of which splice to happen first is very important! threw me in a loop X(
+			leftGridsCopy.splice(targettedGrids[i], 1);
 			targettedGrids.splice(i, 1);
-			leftGridsCopy.splice(i, 1);
 		} else {
 			leftGridsCopy.splice(randomGrid, 1);
 		}
+		console.log(leftGridsCopy, targettedGrids);
 	} else if (element.title.indexOf("ship") >= 0) {
 		element.classList.add('leftCell--hit');
 		let elementIndex = 0;
@@ -205,8 +207,8 @@ function guidedEnemyFire(leftGridsCopy) {
 			}
 		}
 		if (targettedGrids.length > 0) {
+			leftGridsCopy.splice(targettedGrids[i], 1);
 			targettedGrids.splice(i, 1);
-			leftGridsCopy.splice(i, 1);
 		} else {
 			leftGridsCopy.splice(randomGrid, 1);
 		}
@@ -228,6 +230,8 @@ function guidedEnemyFire(leftGridsCopy) {
 			leftBoard.childNodes[elementIndex + 10].classList.value === "leftCell") {
 			targettedGrids.push(elementIndex + 10);
 		}
+		console.log(leftGridsCopy, targettedGrids);
+
 		document.querySelector(".Title").innerHTML = "@== Fire Away!";
 		RightBoard.removeAttribute('title');
 		playerLives--;
