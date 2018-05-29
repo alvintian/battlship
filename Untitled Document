@@ -1,11 +1,33 @@
-why is there an extra 9 in x coordinate?
-how to highlight the effected part while dragging?
+i had some trouble with the first few weeks so i have had a slow start. then Rob told me my canvas is bad so i had to restart from scratch. I pretty much started this project fresh last Wednesday. and the project completion just always seems so out of reach. I have tried asking for help on this project from the TAs, and while not getting any answers at all i think they also avoided me on purpose. i don't now why everyone kept so secretive about this project. pretty much all I had to work with is Rob's template. what's most puzzling are what the expectationss are.
+so summarize, my most troublesome task is dealing with time management. I don't know how all other students managed to do 
+this assignment
 
-[...element parent].indexof to get index..
 
-i am not sure if i should use new codes i don't quite understand yet in my program. like..http://jsfiddle.net/nGRwt/7/
+known bugs:
+there are no highscores tracked. the button does nothing. do i need cookies for that?
+can't drag ships to the right while covering itself. the original image doesn't appear to move while dragging.
+can't make ship change directions while in water. (un-clickable)
+graphic is bad. can see cropped out corners from the start screen.
+
+
+during battle:
+user can click the same enemy tile multiple times and also drag own ships. (i think those are easy fix)
+user can accidently click on the tile border, this will cause the border to change color, and the pc will recognize this as a turn.
+the banner on the top doesn't display correctly. pc moves in an instant while ignoring set timeout.
+
+definitely needs further testing. i htink random clicking may break the program too. i didn't test it enough.
+
+things i want to change other than coding style:
+how do i highlight only part of the image that will be pushed into the div while dragging? 
+my ships looks like literal garbage or tiny fishes.
+
+some questions:
+i am not sure if i can use new codes i don't quite understand yet in my program. like..http://jsfiddle.net/nGRwt/7/
 or just install some plugins(libraries) that does the desired functions for me.
 
-the code for matching the ship with grids was long and look terrible.
 
-i can't drag my ships to the right
+all the help i got:
+a big thanks to professor Rob's code: https://codepen.io/rob0t7/pen/odOgGW?editors=0110
+and a bunch others mostly from w3schools. like drag and drop:
+https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_draganddrop2
+and the part with keys values. i don't remember where i got it from.
