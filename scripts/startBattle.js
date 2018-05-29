@@ -229,6 +229,10 @@ function guidedEnemyFire(leftGridsCopy) {
 			leftBoard.childNodes[elementIndex + 10].classList.value === "leftCell") {
 			targettedGrids.push(elementIndex + 10);
 		}
+		//copied this from internet for removing duplicate elements.
+		targettedGrids = targettedGrids.filter(function(item, index, inputArray) {
+			return inputArray.indexOf(item) == index;
+		});
 		document.querySelector(".Title").innerHTML = "@== Fire Away!";
 		RightBoard.removeAttribute('title');
 		playerLives--;
