@@ -192,12 +192,11 @@ function guidedEnemyFire(leftGridsCopy) {
 		RightBoard.removeAttribute('title');
 		if (targettedGrids.length > 0) {
 			//The order of which splice to happen first is very important! threw me in a loop X(
-			leftGridsCopy.splice(targettedGrids[i], 1);
+			leftGridsCopy.splice(leftGridsCopy.indexOf(targettedGrids[i]), 1);
 			targettedGrids.splice(i, 1);
 		} else {
 			leftGridsCopy.splice(randomGrid, 1);
 		}
-		console.log(leftGridsCopy, targettedGrids);
 	} else if (element.title.indexOf("ship") >= 0) {
 		element.classList.add('leftCell--hit');
 		let elementIndex = 0;
@@ -207,7 +206,7 @@ function guidedEnemyFire(leftGridsCopy) {
 			}
 		}
 		if (targettedGrids.length > 0) {
-			leftGridsCopy.splice(targettedGrids[i], 1);
+			leftGridsCopy.splice(leftGridsCopy.indexOf(targettedGrids[i]), 1);
 			targettedGrids.splice(i, 1);
 		} else {
 			leftGridsCopy.splice(randomGrid, 1);
@@ -230,8 +229,6 @@ function guidedEnemyFire(leftGridsCopy) {
 			leftBoard.childNodes[elementIndex + 10].classList.value === "leftCell") {
 			targettedGrids.push(elementIndex + 10);
 		}
-		console.log(leftGridsCopy, targettedGrids);
-
 		document.querySelector(".Title").innerHTML = "@== Fire Away!";
 		RightBoard.removeAttribute('title');
 		playerLives--;
